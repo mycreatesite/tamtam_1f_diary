@@ -13,17 +13,27 @@
   max-height: 400px;
 }
 
+.heroImage img {
+  width: auto;
+  height: 80%;
+  margin: 0 auto;
+}
+
 .heroDetails {
   position: absolute;
   background: rgba(0, 0, 0, 0.7);
-  left: 50%;
+  left: 0;
   bottom: 0;
-  transform: translate(-50%, 0);
   font-size: 14px;
-  padding: 0 0.5em;
+  padding: 0 5em;
 }
 
 @media (min-width: 600px) {
+  .heroImage img {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+  }
   .heroDetails {
     font-size: 16px;
   }
@@ -41,6 +51,5 @@
 
 .heroTitle {
   margin: 0;
-  font-size: 1.125em;
-  font-weight: bold;
+  font-size: 1em;
 }
