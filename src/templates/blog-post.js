@@ -50,6 +50,11 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    site {
+      siteMetadata {
+				title
+      }
+    }
     contentfulBlogPost(slug: { eq: $slug }) {
       title
 			publishDateJP: publishDate(formatString: "Y年MM月DD日")

@@ -17,9 +17,9 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-					<Helmet title={siteTitle} lang={siteLang} />
+					<Helmet title={siteTitle} htmlAttributes={{lang: siteLang}} />
           <Hero data={author.node} />
-          <div className="wrapper">
+					<div className="wrapper">
             <h2 className="section-headline">Recent Diary</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
@@ -41,6 +41,12 @@ export default RootIndex
 
 export const pageQuery = graphql`
   query HomeQuery {
+    site {
+      siteMetadata {
+				title
+				lang
+      }
+    }
     allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
@@ -76,7 +82,6 @@ export const pageQuery = graphql`
               maxWidth: 1180
               maxHeight: 480
               resizingBehavior: PAD
-              background: "rgb:000000"
             ) {
               ...GatsbyContentfulFluid_tracedSVG
             }
