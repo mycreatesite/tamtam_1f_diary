@@ -25,7 +25,8 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Contentful starter",
+		title: "TAMTAM ONE-PHRASE DIARY",
+		lang: `ja`
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [

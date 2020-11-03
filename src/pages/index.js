@@ -10,13 +10,14 @@ import ArticlePreview from '../components/article-preview'
 class RootIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
+    const siteLang = get(this, 'props.data.site.siteMetadata.lang')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 
     return (
       <Layout location={this.props.location}>
         <div style={{ background: '#fff' }}>
-          <Helmet title={siteTitle} />
+					<Helmet title={siteTitle} lang={siteLang} />
           <Hero data={author.node} />
           <div className="wrapper">
             <h2 className="section-headline">Recent Diary</h2>
