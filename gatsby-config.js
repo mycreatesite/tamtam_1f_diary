@@ -26,7 +26,8 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
 		title: "TAMTAM ONE-PHRASE DIARY",
-		lang: `ja`
+		lang: `ja`,
+		description: `たむたむのひとこと日記`,
   },
   pathPrefix: "/gatsby-contentful-starter",
   plugins: [
