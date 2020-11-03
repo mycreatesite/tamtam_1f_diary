@@ -1,8 +1,9 @@
+//blog page
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import styles from './blog.module.css'
+import styles from './css/blog.module.css'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 
@@ -17,7 +18,7 @@ class BlogIndex extends React.Component {
           <Helmet title={siteTitle} />
           <div className={styles.hero}>Blog</div>
           <div className="wrapper">
-            <h2 className="section-headline">Recent articles ほげ</h2>
+            <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -43,7 +44,8 @@ export const pageQuery = graphql`
         node {
           title
           slug
-          publishDate(formatString: "MMMM Do, YYYY")
+					publishDateJP: publishDate(formatString: "Y年MM月DD日")
+					publishDate(formatString: "YYYY-MM-DD")
           tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {

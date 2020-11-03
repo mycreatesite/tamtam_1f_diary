@@ -1,3 +1,4 @@
+//post-detail
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
@@ -5,7 +6,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-import heroStyles from '../components/hero.module.css'
+import heroStyles from '../components/css/hero.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -25,13 +26,14 @@ class BlogPostTemplate extends React.Component {
           </div>
           <div className="wrapper">
             <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
+						<time
+							dateTime={post.publishDate}
+							style={{
+								display: 'block',
+							}}
             >
-              {post.publishDate}
-            </p>
+              {post.publishDateJP}
+            </time>
             <div
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
@@ -50,7 +52,8 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
       title
-      publishDate(formatString: "MMMM Do, YYYY")
+			publishDateJP: publishDate(formatString: "Y年MM月DD日")
+			publishDate(formatString: "YYYY-MM-DD")
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
