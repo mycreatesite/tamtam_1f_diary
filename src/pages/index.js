@@ -47,7 +47,6 @@ export const pageQuery = graphql`
           slug
 					publishDateJP: publishDate(formatString: "Y年MM月DD日")
 					publishDate(formatString: "YYYY-MM-DD")
-          tags
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
               ...GatsbyContentfulFluid_tracedSVG
