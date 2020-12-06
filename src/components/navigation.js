@@ -1,7 +1,7 @@
 //global nav
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from './css/navigation.module.css'
+import styles from './scss/navigation.module.scss'
 
 export default () => (
   <nav role="navigation">

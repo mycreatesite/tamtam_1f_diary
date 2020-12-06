@@ -6,7 +6,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-import heroStyles from '../components/css/hero.module.css'
+import heroStyles from '../components/scss/hero.module.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import styles from './css/article-preview.module.css'
+import styles from './scss/article-preview.module.scss'
 
 export default ({ article }) => (
   <div className={styles.preview}>

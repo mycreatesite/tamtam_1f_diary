@@ -3,7 +3,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
-import styles from './css/blog.module.css'
+import styles from './scss/blog.module.scss'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 

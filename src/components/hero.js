@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-import styles from './css/hero.module.css'
+import styles from './scss/hero.module.scss'
 
 export default ({ data }) => (
   <div className={styles.hero}>
