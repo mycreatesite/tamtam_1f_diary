@@ -12,7 +12,7 @@ const NotFoundPage = () => (
         display: `flex`,
         justifyContent: `center`,
 				alignItems: `center`,
-				padding: `0 1rem`;
+				padding: `0 1rem`,
       }}
     >
       <div>
