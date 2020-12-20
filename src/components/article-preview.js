@@ -12,9 +12,9 @@ export default ({ article }) => {
 				<Img alt="" fluid={article.heroImage.fluid}  className={styles.previewImg}/>
 				<div className={styles.previewHukidasi}>
 					<time dateTime={article.publishDate}>{article.publishDateJP}</time>
-					<h3 className={styles.previewTitle}>
+					<h2 className={styles.previewTitle}>
 						{article.title}
-					</h3>
+					</h2>
 					<span className={styles.previewArrow}>→</span>
 				</div>
 			</Link>
