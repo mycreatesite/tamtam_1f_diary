@@ -11,9 +11,6 @@ export default (props) => (
 					<img src="/img/nav.svg" alt={props.siteTitle} width="187" height="27" />
 				</Link>
       </li>
-      {/* <li className={styles.navigationItem}>
-        <Link to="/blog/">Blog</Link>
-      </li> */}
     </ul>
   </nav>
 )
