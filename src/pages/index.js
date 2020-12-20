@@ -17,7 +17,6 @@ class RootIndex extends React.Component {
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
 		const [author] = get(this, 'props.data.allContentfulPerson.edges')
-		console.log(siteOgImage)
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>

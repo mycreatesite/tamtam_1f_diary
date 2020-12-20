@@ -14,8 +14,6 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
 		const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-		const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
-		console.log(siteOgImage)
     return (
       <Layout location={this.props.location}>
         <div>
