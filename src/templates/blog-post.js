@@ -5,8 +5,10 @@ import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
+import AuthorData from '../components/author-data'
+import Footer from '../components/footer'
 
-import heroStyles from '../components/scss/hero.module.scss'
+import styles from './scss/blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -17,28 +19,32 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location}>
         <div>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
+          <div className={styles.hero}>
             <Img
-              className={heroStyles.heroImage}
+              className={styles.heroImage}
               alt={post.title}
               fluid={post.heroImage.fluid}
             />
-          </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
+					</div>
+					<div className={styles.postHeader}>
 						<time
 							dateTime={post.publishDate}
-							style={{
-								display: 'block',
-							}}
             >
               {post.publishDateJP}
-            </time>
-            <div
-              dangerouslySetInnerHTML={{
-                __html: post.body.childMarkdownRemark.html,
-              }}
-            />
+						</time>
+						<h1 className="section-headline">{post.title}</h1>
+					</div>
+          <div className="wrapper">
+						{post.body && (
+							<div
+								className={styles.postContent}
+								dangerouslySetInnerHTML={{
+									__html: post.body.childMarkdownRemark.html,
+								}}
+							/>
+						)}
+						<AuthorData />
+						<Footer />
           </div>
         </div>
       </Layout>

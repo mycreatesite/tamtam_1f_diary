@@ -2,13 +2,18 @@
 @import "~fontsource-noto-sans-jp/700.css";
 @import "~fontsource-noto-sans-jp/900.css";
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   position: relative;
   z-index: 0;
   font-family: "Noto Sans JP", sans-serif;
-  font-size: 1em;
+  font-size: 1rem;
   line-height: 1.65;
-  color: #373f49;
+  letter-spacing: 0.1em;
+  color: #000;
   background-color: #f7f7f7;
   margin: 0;
   &::before {
@@ -33,9 +38,18 @@ img {
 
 h1,
 h2,
+h3,
+h4 {
+  font-weight: 900;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.875rem;
+}
+
 h3 {
-  font-size: 2em;
-  font-weight: normal;
+  font-size: 1.25rem;
 }
 
 a {
@@ -45,15 +59,20 @@ a {
 .wrapper {
   width: calc(100% - 9vmin);
   max-width: 848px;
-  margin: 0 auto;
-  padding: 5vmin 0;
+  margin: 2.5rem auto 0;
+  padding: 2rem 1rem;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 32px 32px 0px 0px;
+  @media (min-width: 600px) {
+    padding: 4rem 2.5rem;
+  }
 }
 
 /**
  * article grid
  */
 .article-list {
-  margin: 0;
+  margin: 0 0 2.5rem;
   padding: 0;
   list-style: none;
   display: grid;
@@ -64,10 +83,10 @@ a {
 /**
  *
  */
+
 .section-headline {
   padding: 0 0 0.4em 0;
   margin: 0 0 5vmin 0;
-  border-bottom: 1px solid #ddd;
 }
 
 /**

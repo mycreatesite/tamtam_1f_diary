@@ -6,6 +6,8 @@ import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
+import AuthorData from '../components/author-data'
+import Footer from '../components/footer'
 
 class RootIndex extends React.Component {
   render() {
@@ -14,7 +16,7 @@ class RootIndex extends React.Component {
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-            
+		
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
@@ -33,7 +35,9 @@ class RootIndex extends React.Component {
                   </li>
                 )
               })}
-            </ul>
+						</ul>
+						<AuthorData />
+						<Footer />
           </div>
         </div>
       </Layout>
@@ -60,7 +64,7 @@ export const pageQuery = graphql`
 					publishDateJP: publishDate(formatString: "Y.MM.DD")
 					publishDate(formatString: "YYYY-MM-DD")
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
+            fluid(maxWidth: 350, maxHeight: 350, resizingBehavior: FILL) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }

@@ -1,3 +1,46 @@
-.previewTitle {
-  font-size: 1.5em;
+.previewlink {
+  display: block;
+  text-decoration: none;
+}
+
+.previewImg {
+  width: 70%;
+  height: auto;
+  border-radius: 50%;
+  border: 10px solid #f3f3f3;
+  margin: 0 auto;
+  @media (min-width: 600px) {
+    width: auto;
+    height: auto;
+  }
+}
+
+.previewHukidasi {
+  position: relative;
+  padding: 1rem 1rem 1.5rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  &::after {
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 19px);
+    display: block;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    border-radius: 2px;
+  }
+  time {
+    padding: 1px 0.5rem 2px;
+    background-color: #fafd5e;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 9px;
+  }
+  h3 {
+    margin: 0.5rem 0 0;
+  }
 }
