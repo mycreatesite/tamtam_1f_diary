@@ -1,8 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 const NotFoundPage = () => (
-  <div>
+  <Layout location={this.props.location}>
     <SEO title="404: Not found" />
     <div
       style={{
@@ -23,6 +24,6 @@ const NotFoundPage = () => (
         </p>
       </div>
     </div>
-  </div>
+  </Layout>
 )
 export default NotFoundPage
