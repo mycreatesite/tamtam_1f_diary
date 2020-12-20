@@ -1,9 +1,9 @@
 import { Link } from "gatsby"
 import React from "react"
-import { Helmet } from 'react-helmet'
+import SEO from '../components/seo'
 const NotFoundPage = () => (
-  <>
-    <Helmet title="404: Not found" />
+  <div>
+    <SEO title="404: Not found" />
     <div
       style={{
         width: `100vw`,
@@ -14,15 +14,15 @@ const NotFoundPage = () => (
       }}
     >
       <div>
-        <h1>NOT FOUND</h1>
+        <h1>そんなページないよ～</h1>
         <p>
-          {`You just hit a route that doesn't exist... Please visit `}{" "}
+          {`URLが間違ってるんじゃないかな？`}
           <Link to="/" className="link-style">
-            Homepage
+            ［ほーむにもどる］
           </Link>
         </p>
       </div>
     </div>
-  </>
+  </div>
 )
 export default NotFoundPage
