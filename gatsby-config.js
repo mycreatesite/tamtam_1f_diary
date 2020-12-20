@@ -25,9 +25,9 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-		title: "TAMTAM ONE-PHRASE DIARY",
+		title: "TAMTAM ONE-PHRASE DIARY - たむたむのひとこと日記",
 		lang: `ja`,
-		description: `たむたむのひとこと日記`,
+		description: `世界一かわいい生き物であるネザーランドドワーフのたむたむ（♂）がひとりごちるサイトです。`,
   },
   pathPrefix: "/gatsby-contentful-starter",
 	plugins: [

@@ -16,16 +16,15 @@ class RootIndex extends React.Component {
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
             
     return (
-      <Layout location={this.props.location}>
-        <div style={{ background: '#fff' }}>
+      <Layout location={this.props.location} siteTitle={siteTitle}>
+        <div>
 					<Helmet
 						title={siteTitle}
 						htmlAttributes={{ lang: siteLang }}
 						meta={[{ name: 'description', content: siteDesc}]}
 					/>
-          <Hero data={author.node} />
+          <Hero data={author.node} siteTitle={siteTitle}/>
 					<div className="wrapper">
-            <h2 className="section-headline">ひとこと Diary</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {
                 return (
@@ -58,7 +57,7 @@ export const pageQuery = graphql`
         node {
           title
           slug
-					publishDateJP: publishDate(formatString: "Y年MM月DD日")
+					publishDateJP: publishDate(formatString: "Y.MM.DD")
 					publishDate(formatString: "YYYY-MM-DD")
           heroImage {
             fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {

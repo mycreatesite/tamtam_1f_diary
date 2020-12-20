@@ -1,6 +1,5 @@
 import React from 'react'
 import './scss/base.scss'
-import Container from './container'
 import Navigation from './navigation'
 
 class Template extends React.Component {
@@ -8,10 +7,10 @@ class Template extends React.Component {
     const { children } = this.props
 
     return (
-      <Container>
-        <Navigation />
+      <div className="rootContainer">
+				<Navigation siteTitle={this.props.siteTitle}/>
         {children}
-      </Container>
+      </div>
     )
   }
 }

@@ -2,11 +2,7 @@
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  height: 20vh;
-  max-height: 100px;
-  font-size: 1.25em;
+  height: 80px;
 }
 
 .navigationItem {
@@ -17,4 +13,16 @@
 
 .navigationItem a {
   color: currentColor;
+}
+
+@media (min-width: 600px) {
+  .navigation {
+    height: 100px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navigation {
+    height: 160px;
+  }
 }
