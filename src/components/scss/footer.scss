@@ -6,10 +6,24 @@
   }
   ._logo {
     width: 75px;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
     padding: 1.5rem 0 0.5rem;
+    a {
+      display: block;
+    }
   }
-  small {
+  ._copyright,
+  ._notice {
+    display: block;
     font-size: 10px;
+    strong {
+      border-bottom: 1px dashed #000;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+  ._copyright {
+    margin-top: 1rem;
   }
 }
