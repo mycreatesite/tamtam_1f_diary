@@ -32,6 +32,7 @@ module.exports = {
 		author: `たむたむ`,
 		url: `https://tamtam-1p-diary.netlify.app/`,
 		image: `img/OGP.png`,
+		appleTouchIcon: `img/apple-touch-icon.png`,
 		twitterUsername: `@hello_myscreate`
 	},
   pathPrefix: "/gatsby-contentful-starter",

@@ -17,7 +17,8 @@ function SEO({ title, description, image, lang  }) {
             siteUrl: url
             defaultImage: image
             defaultLang: lang
-            twitterUsername
+						twitterUsername
+						appleTouchIcon
           }
         }
       }
@@ -30,7 +31,8 @@ function SEO({ title, description, image, lang  }) {
     siteUrl,
     defaultImage,
     defaultLang,
-    twitterUsername,
+		twitterUsername,
+		appleTouchIcon,
   } = site.siteMetadata
 
   const seo = {
@@ -54,7 +56,8 @@ function SEO({ title, description, image, lang  }) {
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitterUsername} />
+			<meta name="twitter:site" content={twitterUsername} />
+			<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}></link>
     </Helmet>
   )
 }
