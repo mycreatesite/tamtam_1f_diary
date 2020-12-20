@@ -6,15 +6,19 @@
   background-image: url(/img/bg-hero.svg);
   background-repeat: no-repeat;
   background-position: left;
-  background-size: cover;
+  background-size: contain;
   @media (min-width: 768px) {
     background-position: center;
+    background-size: cover;
   }
 }
 
 .heroImage {
   width: calc(100% - 2rem);
   height: auto;
+  img {
+    height: auto;
+  }
 }
 
 .heroDetails {
