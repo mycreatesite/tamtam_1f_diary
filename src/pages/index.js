@@ -17,7 +17,7 @@ class RootIndex extends React.Component {
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
-		
+
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
@@ -29,7 +29,7 @@ class RootIndex extends React.Component {
 							{ property: 'og:title', content: siteTitle },
 							{ property: 'og:type', content: 'blog' },
 							{ property: 'og:url', content: posts.slug },
-							{ property: 'og:image', content: posts.heroImage.file.url || siteOgImage },
+							{ property: 'og:image', content: siteOgImage },
 							{ property: 'og:description', content: siteDesc },
 							{ name: 'twitter:card', content: 'summary_large_image' },
 							{ name: 'twitter:site', content: '@hello_myscreate' },
