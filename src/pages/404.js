@@ -16,7 +16,7 @@ const NotFoundPage = () => (
       }}
     >
       <div>
-        <h1>そんなページないよ～</h1>
+        <h1>そんなページないよ～～</h1>
         <p>
           {`URLが間違ってるんじゃないかな？`}
           <Link to="/" className="link-style">
