@@ -8,10 +8,11 @@ const NotFoundPage = () => (
     <div
       style={{
         width: `100vw`,
-        height: `100vh`,
+        height: `50vh`,
         display: `flex`,
         justifyContent: `center`,
-        alignItems: `center`,
+				alignItems: `center`,
+				padding: `0 1rem`;
       }}
     >
       <div>
