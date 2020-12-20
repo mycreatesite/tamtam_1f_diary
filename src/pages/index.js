@@ -14,6 +14,7 @@ class RootIndex extends React.Component {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteLang = get(this, 'props.data.site.siteMetadata.lang')
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
+    const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const [author] = get(this, 'props.data.allContentfulPerson.edges')
 		
@@ -23,7 +24,16 @@ class RootIndex extends React.Component {
 					<Helmet
 						title={siteTitle}
 						htmlAttributes={{ lang: siteLang }}
-						meta={[{ name: 'description', content: siteDesc}]}
+						meta={[
+							{ name: 'description', content: siteDesc },
+							{ property: 'og:title', content: siteTitle },
+							{ property: 'og:type', content: 'blog' },
+							{ property: 'og:url', content: posts.slug },
+							{ property: 'og:image', content: posts.heroImage.file.url || siteOgImage },
+							{ property: 'og:description', content: siteDesc },
+							{ name: 'twitter:card', content: 'summary_large_image' },
+							{ name: 'twitter:site', content: '@hello_myscreate' },
+						]}
 					/>
           <Hero data={author.node} siteTitle={siteTitle}/>
 					<div className="wrapper">
