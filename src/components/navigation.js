@@ -8,7 +8,7 @@ export default (props) => (
     <ul className={styles.navigation}>
       <li className={styles.navigationItem}>
 				<Link to="/">
-					<img src="/img/nav.svg" alt={props.siteTitle} />
+					<img src="/img/nav.svg" alt={props.siteTitle} width="187" height="27" />
 				</Link>
       </li>
       {/* <li className={styles.navigationItem}>

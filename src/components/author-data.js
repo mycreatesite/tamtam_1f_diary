@@ -6,7 +6,7 @@ export default () => (
 	<div className="authorData">
 		<div className="_container">
 			<div className="_image">
-				<img src="/img/tamtam.png" alt="たむたむ"/>
+				<img src="/img/tamtam.png" alt="たむたむ"  width="68" height="68"/>
 			</div>
 			<div className="_description">
 				<p className="_heading">たむたむとは</p>

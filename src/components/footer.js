@@ -9,7 +9,7 @@ export default () => (
 		</div>
 		<div className="_logo">
 			<a href="https://myscreate.com/" target="_blank" rel="noopener noreferrer">
-				<img src="/img/logo.svg" alt="ma-ya's CREATE"/>
+				<img src="/img/logo.svg" alt="ma-ya's CREATE" width="75" height="37"/>
 			</a>
 		</div>
 		<small className="_notice">
