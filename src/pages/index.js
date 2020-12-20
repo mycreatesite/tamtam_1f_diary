@@ -16,7 +16,6 @@ class RootIndex extends React.Component {
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-		const [author] = get(this, 'props.data.allContentfulPerson.edges')
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
@@ -25,7 +24,7 @@ class RootIndex extends React.Component {
 						image={siteOgImage}
 						lang={siteLang}
 					/>
-          <Hero data={author.node} siteTitle={siteTitle}/>
+          <Hero siteTitle={siteTitle}/>
 					<div className="wrapper">
             <ul className="article-list">
               {posts.map(({ node }) => {
@@ -65,28 +64,6 @@ export const pageQuery = graphql`
 					publishDate(formatString: "YYYY-MM-DD")
           heroImage {
             fluid(maxWidth: 350, maxHeight: 350, resizingBehavior: FILL) {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
-        }
-      }
-    }
-    allContentfulPerson(
-      filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }
-    ) {
-      edges {
-        node {
-          name
-          shortBio {
-            shortBio
-          }
-          title
-          heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: PAD
-            ) {
               ...GatsbyContentfulFluid_tracedSVG
             }
           }
