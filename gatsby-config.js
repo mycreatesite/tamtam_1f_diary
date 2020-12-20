@@ -28,7 +28,7 @@ module.exports = {
 		title: `TAMTAM ONE-PHRASE DIARY - たむたむのひとこと日記`,
 		titleTemplate: `%s · TAMTAM ONE-PHRASE DIARY - たむたむのひとこと日記`,
 		lang: `ja`,
-		description: `世界一かわいい生き物であるネザーランドドワーフのたむたむ（♂）がひとりごちるサイトです。`,
+		description: `世界一かわいい生き物であるネザーランドドワーフのたむたむ（♂）がひとりごちるブログです。`,
 		author: `たむたむ`,
 		url: `https://tamtam-1p-diary.netlify.app/`,
 		image: `img/OGP.png`,
