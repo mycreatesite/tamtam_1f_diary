@@ -1,24 +1,27 @@
 //post-detail
 import React from 'react'
 import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import AuthorData from '../components/author-data'
 import Footer from '../components/footer'
+import SEO from '../components/seo'
 
 import styles from './scss/blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
-    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-
+		const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+		const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
+		console.log(siteOgImage)
     return (
       <Layout location={this.props.location}>
         <div>
-          <Helmet title={`${post.title} | ${siteTitle}`} />
+					<SEO
+						title={`${post.title} | ${siteTitle}`}
+					/>
           <div className={styles.hero}>
             <Img
               className={styles.heroImage}

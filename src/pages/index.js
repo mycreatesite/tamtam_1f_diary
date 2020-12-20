@@ -2,12 +2,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
-import { Helmet } from 'react-helmet'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
 import ArticlePreview from '../components/article-preview'
 import AuthorData from '../components/author-data'
 import Footer from '../components/footer'
+import SEO from '../components/seo'
 
 class RootIndex extends React.Component {
   render() {
@@ -16,24 +16,15 @@ class RootIndex extends React.Component {
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
-    const [author] = get(this, 'props.data.allContentfulPerson.edges')
-
+		const [author] = get(this, 'props.data.allContentfulPerson.edges')
+		console.log(siteOgImage)
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
-					<Helmet
-						title={siteTitle}
-						htmlAttributes={{ lang: siteLang }}
-						meta={[
-							{ name: 'description', content: siteDesc },
-							{ property: 'og:title', content: siteTitle },
-							{ property: 'og:type', content: 'blog' },
-							{ property: 'og:url', content: posts.slug },
-							{ property: 'og:image', content: siteOgImage },
-							{ property: 'og:description', content: siteDesc },
-							{ name: 'twitter:card', content: 'summary_large_image' },
-							{ name: 'twitter:site', content: '@hello_myscreate' },
-						]}
+					<SEO title={siteTitle}
+						description={siteDesc}
+						image={siteOgImage}
+						lang={siteLang}
 					/>
           <Hero data={author.node} siteTitle={siteTitle}/>
 					<div className="wrapper">

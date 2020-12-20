@@ -24,12 +24,16 @@ if (!spaceId || !accessToken) {
 }
 
 module.exports = {
-  siteMetadata: {
-		title: "TAMTAM ONE-PHRASE DIARY - たむたむのひとこと日記",
+	siteMetadata: {
+		title: `TAMTAM ONE-PHRASE DIARY - たむたむのひとこと日記`,
+		titleTemplate: `%s · TAMTAM ONE-PHRASE DIARY - たむたむのひとこと日記`,
 		lang: `ja`,
 		description: `世界一かわいい生き物であるネザーランドドワーフのたむたむ（♂）がひとりごちるサイトです。`,
-		image: `/img/OGP.png`
-  },
+		author: `たむたむ`,
+		url: `https://tamtam-1p-diary.netlify.app/`,
+		image: `img/OGP.png`,
+		twitterUsername: `@hello_myscreate`
+	},
   pathPrefix: "/gatsby-contentful-starter",
 	plugins: [
 		"gatsby-plugin-sass",
