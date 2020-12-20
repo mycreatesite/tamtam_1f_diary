@@ -15,7 +15,7 @@ class RootIndex extends React.Component {
     const siteLang = get(this, 'props.data.site.siteMetadata.lang')
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
-    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+		const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
@@ -30,7 +30,7 @@ class RootIndex extends React.Component {
               {posts.map(({ node }) => {
                 return (
                   <li key={node.slug}>
-                    <ArticlePreview article={node} />
+										<ArticlePreview article={node} />
                   </li>
                 )
               })}
@@ -59,7 +59,10 @@ export const pageQuery = graphql`
       edges {
         node {
           title
-          slug
+					slug
+					body {
+						body
+					}
 					publishDateJP: publishDate(formatString: "Y.MM.DD")
 					publishDate(formatString: "YYYY-MM-DD")
           heroImage {

@@ -50,14 +50,14 @@
 }
 
 .heroImage {
-  width: 70vw;
-  height: 70vw;
+  width: calc(100vw - 2rem);
+  height: calc(100vw - 2rem);
   border-radius: 50%;
   overflow: hidden;
   border: 10px solid #f3f3f3;
   @media (min-width: 600px) {
-    width: 416px;
-    height: 416px;
+    width: 500px;
+    height: 500px;
   }
 }
 
