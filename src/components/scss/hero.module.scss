@@ -5,18 +5,16 @@
   align-items: center;
   background-image: url(/img/bg-hero.svg);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: left;
   background-size: cover;
-  height: 50vw;
+  @media (min-width: 768px) {
+    background-position: center;
+  }
 }
 
 .heroImage {
-  height: 100%;
-}
-
-.heroImage img {
-  width: auto;
-  height: 100%;
+  width: calc(100% - 2rem);
+  height: auto;
 }
 
 .heroDetails {
@@ -28,17 +26,17 @@
   padding: 0 5em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .hero {
     height: 31vw;
   }
   .heroImage {
-    width: 45%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     img {
-      max-height: 420px;
+      max-height: 450px;
     }
   }
 }

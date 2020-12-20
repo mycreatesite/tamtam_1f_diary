@@ -4,7 +4,7 @@
 }
 
 .previewImg {
-  width: 70%;
+  width: 80%;
   height: auto;
   border-radius: 50%;
   border: 10px solid #f3f3f3;
@@ -21,6 +21,7 @@
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
+  text-align: center;
   &::after {
     position: absolute;
     top: -12px;
@@ -42,5 +43,26 @@
   }
   h3 {
     margin: 0.5rem 0 0;
+  }
+  .previewArrow {
+    position: absolute;
+    bottom: 0.2rem;
+    right: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    transition: transform 0.3s;
+  }
+  @media (min-width: 600px) {
+    text-align: left;
+  }
+}
+
+.previewlink {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+    .previewArrow {
+      transform: translateX(0.25rem);
+    }
   }
 }

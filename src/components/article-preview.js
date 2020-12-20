@@ -15,6 +15,7 @@ export default ({ article }) => {
 					<h3 className={styles.previewTitle}>
 						{article.title}
 					</h3>
+					<span className={styles.previewArrow}>→</span>
 				</div>
 			</Link>
 		</div>
