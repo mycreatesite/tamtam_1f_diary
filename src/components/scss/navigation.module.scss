@@ -11,19 +11,3 @@
   align-items: center;
   margin: 0 1em;
 }
-
-.navigationItem a {
-  color: currentColor;
-}
-
-@media (min-width: 600px) {
-  .navigation {
-    height: 100px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .navigation {
-    height: 160px;
-  }
-}
