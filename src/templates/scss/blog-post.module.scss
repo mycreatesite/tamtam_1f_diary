@@ -39,6 +39,23 @@
   margin-bottom: 5rem;
 }
 
+.btnBack {
+  text-align: center;
+  margin-bottom: 5rem;
+  a {
+    display: inline-block;
+  }
+  span {
+    font-size: 0.75rem;
+    padding: 8px 16px;
+    height: auto;
+    border-radius: 1rem;
+    &:hover {
+      transform: translateX(-4px);
+    }
+  }
+}
+
 .hero {
   position: relative;
   display: flex;

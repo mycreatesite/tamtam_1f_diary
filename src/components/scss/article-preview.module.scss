@@ -16,8 +16,9 @@
 }
 
 .previewHukidasi {
-  position: relative;
-  padding: 1.5rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1rem 1rem;
   background: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
@@ -34,43 +35,24 @@
     transform: rotate(45deg);
     border-radius: 2px;
   }
-  time {
-    padding: 1px 0.5rem 2px;
-    background-color: #f8fc30;
-    font-size: 10px;
-    font-weight: bold;
-    border-radius: 9px;
+  .previewTime {
+    time {
+      display: inline-block;
+      padding: 1px 0.5rem 2px;
+      background-color: #f8fc30;
+      font-size: 10px;
+      font-weight: bold;
+      border-radius: 9px;
+    }
   }
   .previewTitle {
     font-size: 1.2rem;
-    margin: 0.5rem 0 0;
+    margin: 0.5rem 0;
   }
   .previewArrow {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    transition: transform 0.3s;
-    background-color: #000;
-    color: #fff;
-    line-height: 0.95rem;
+    text-align: right;
   }
   @media (min-width: 600px) {
     text-align: left;
-  }
-}
-
-a.previewlink {
-  transition: opacity 0.3s;
-  &:hover {
-    opacity: 0.8;
-    .previewArrow {
-      transform: translateX(0.25rem);
-    }
   }
 }

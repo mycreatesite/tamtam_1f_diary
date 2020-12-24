@@ -1,5 +1,6 @@
 //post-detail
 import React from 'react'
+import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
@@ -44,6 +45,11 @@ class BlogPostTemplate extends React.Component {
 								}}
 							/>
 						)}
+						<p className={styles.btnBack}>
+							<Link to="/">
+								<span className="label-black">← とっぷへもどる</span>
+							</Link>
+						</p>
 						<AuthorData />
 						<Footer />
           </div>

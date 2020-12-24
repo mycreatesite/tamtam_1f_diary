@@ -112,3 +112,26 @@ a {
 .list-inline li {
   display: inline-block;
 }
+
+.label-black {
+  display: inline-block;
+  height: 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.5rem;
+  font-weight: 700;
+  transition: transform 0.3s;
+  background-color: #000;
+  color: #fff;
+  line-height: 0.95rem;
+  padding: 0 4px;
+}
+
+a {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+    .label-black {
+      transform: translateX(0.25rem);
+    }
+  }
+}
