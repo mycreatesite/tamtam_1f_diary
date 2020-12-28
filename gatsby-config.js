@@ -45,6 +45,15 @@ module.exports = {
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
-		}
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        // You can add multiple tracking ids and a pageview event will be fired for all of them.
+        trackingIds: [
+          "UA-117563332-3", // Google Analytics
+        ],
+      },
+    }
   ],
 };

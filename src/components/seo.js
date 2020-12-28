@@ -56,8 +56,8 @@ function SEO({ title, description, image, lang  }) {
       <meta property="og:description" content={seo.description} />
       <meta property="og:image" content={seo.image} />
       <meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:site" content={twitterUsername} />
-			<link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}></link>
+      <meta name="twitter:site" content={twitterUsername} />
+      <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}></link>
     </Helmet>
   )
 }
