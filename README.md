@@ -1,6 +1,6 @@
 # たむたむのひとこと日記
 
-![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
+![tamtam_1p_diary](https://raw.githubusercontent.com/mycreatesite/tamtam_1f_diary/master/screenshot.jpg "tamtam_1p_diary")
 
 ## 概要
 
