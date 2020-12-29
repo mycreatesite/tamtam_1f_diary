@@ -31,6 +31,7 @@ module.exports = {
 		description: `世界一かわいい生き物であるネザーランドドワーフのたむたむ（♂）がひとりごちるブログです。`,
 		author: `たむたむ`,
 		url: `https://tamtam-1p-diary.netlify.app/`,
+		siteUrl: `https://tamtam-1p-diary.netlify.app/`,
 		image: `img/OGP.png`,
 		appleTouchIcon: `img/apple-touch-icon.png`,
 		twitterUsername: `@hello_myscreate`
@@ -42,6 +43,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-source-contentful",
       options: contentfulConfig,
