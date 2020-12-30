@@ -1,6 +1,11 @@
 .previewlink {
   display: block;
-  text-decoration: none;
+	text-decoration: none;
+	&:hover {
+		.previewMore {
+			transform: translateX(4px);
+		}
+	}
 }
 
 .previewImg {
@@ -16,10 +21,12 @@
 }
 
 .previewMore {
+	display: inline-block;
 	font-weight: bold;
 	font-size: .75rem;
 	letter-spacing: 1;
 	border-bottom: 1px solid #000;
+	transition: .3s;
 }
 
 .previewHukidasi {
