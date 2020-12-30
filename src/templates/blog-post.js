@@ -8,7 +8,6 @@ import Layout from '../components/layout'
 import AuthorData from '../components/author-data'
 import Footer from '../components/footer'
 import SEO from '../components/seo'
-
 import styles from './scss/blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
@@ -47,7 +46,7 @@ class BlogPostTemplate extends React.Component {
 						)}
 						<p className={styles.btnBack}>
 							<Link to="/">
-								<span className="label-black">← とっぷへもどる</span>
+								<span className="label-default">← とっぷへもどる</span>
 							</Link>
 						</p>
 						<AuthorData />

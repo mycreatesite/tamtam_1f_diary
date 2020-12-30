@@ -18,7 +18,7 @@ export default ({ article }) => {
 									{article.title}
 								</h2>
 								<div className={styles.previewArrow}>
-									<span className="label-black">もっとみる →</span>
+									<span className={styles.previewMore}>もっとみる →</span>
 								</div>
 							</div>
 						</Link>

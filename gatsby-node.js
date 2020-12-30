@@ -35,7 +35,24 @@ exports.createPages = ({ graphql, actions }) => {
               slug: post.node.slug,
             },
           })
-        })
+				})
+
+				const blogPostsPerPage = 9
+				const blogPosts = result.data.allContentfulBlogPost.edges.length
+				const blogPages = Math.ceil(blogPosts / blogPostsPerPage) 
+				Array.from({ length: blogPages }).forEach((_, i) => {
+					createPage({
+						path: i === 0 ? `/` : `/${i + 1}/`,
+						component: path.resolve("./src/templates/index.js"),
+						context: {
+							skip: blogPostsPerPage * i,
+							limit: blogPostsPerPage,
+							currentPage: i + 1,
+							isFirst: i + 1 === 1,
+							isLast: i + 1 === blogPages
+						},
+					})
+				})
       })
     )
   })

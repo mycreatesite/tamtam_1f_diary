@@ -1,6 +1,7 @@
 //home page
 import React from 'react'
 import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
 import get from 'lodash/get'
 import Hero from '../components/hero'
 import Layout from '../components/layout'
@@ -10,12 +11,13 @@ import Footer from '../components/footer'
 import SEO from '../components/seo'
 
 class RootIndex extends React.Component {
-  render() {
+	render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
     const siteLang = get(this, 'props.data.site.siteMetadata.lang')
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
 		const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
@@ -35,6 +37,24 @@ class RootIndex extends React.Component {
                 )
               })}
 						</ul>
+						<ul className="pagination">
+							{!this.props.pageContext.isFirst && (
+								<li>
+									<Link to={this.props.pageContext.currentPage === 2 ? `/` : `/${this.props.pageContext.currentPage - 1}/`}
+												rel="prev"
+										 		className="label-default"
+									>←まえのぺーじ</Link>
+								</li>
+							)}
+							{!this.props.pageContext.isLast && (
+								<li>
+									<Link to={`/${this.props.pageContext.currentPage + 1}/`}
+												rel="next"
+												className="label-default"
+									>つぎのぺーじ→</Link>
+								</li>
+							)}
+						</ul>
 						<AuthorData />
 						<Footer />
           </div>
@@ -47,7 +67,7 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query HomeQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
 				title
@@ -55,7 +75,11 @@ export const pageQuery = graphql`
 				description
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(
+			sort: { fields: [publishDate], order: DESC }
+			skip: $skip
+			limit: $limit
+			) {
       edges {
         node {
           title
