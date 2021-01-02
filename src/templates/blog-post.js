@@ -11,11 +11,11 @@ import SEO from '../components/seo'
 import styles from './scss/blog-post.module.scss'
 
 class BlogPostTemplate extends React.Component {
-  render() {
+	render() {
     const post = get(this.props, 'data.contentfulBlogPost')
 		const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     return (
-      <Layout location={this.props.location}>
+      <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
 					<SEO
 						title={`${post.title} | ${siteTitle}`}

@@ -51,3 +51,31 @@
   margin: 0;
   font-size: 1em;
 }
+
+#tamtam {
+	transform-origin: right bottom;
+	animation: tamtam 5s ease-in-out 1s infinite alternate;
+}
+@keyframes tamtam {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	53% {
+		transform: rotate(2deg);
+	}
+	56% {
+		transform: rotate(-2deg);
+	}
+	59% {
+		transform: rotate(2deg);
+	}
+	62% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

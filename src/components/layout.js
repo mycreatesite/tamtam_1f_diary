@@ -5,7 +5,7 @@ import BgAnim from './bg-anim'
 
 class Template extends React.Component {
   render() {
-    const { children } = this.props
+		const { children } = this.props
 
     return (
       <div className="rootContainer">
