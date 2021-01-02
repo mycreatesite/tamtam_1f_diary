@@ -1,6 +1,7 @@
 import React from 'react'
-import './scss/base.scss'
+import '../scss/base.scss'
 import Navigation from './navigation'
+import BgAnim from './bg-anim'
 
 class Template extends React.Component {
   render() {
@@ -9,7 +10,8 @@ class Template extends React.Component {
     return (
       <div className="rootContainer">
 				<Navigation siteTitle={this.props.siteTitle}/>
-        {children}
+				{children}
+				<BgAnim />
       </div>
     )
   }

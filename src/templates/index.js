@@ -42,7 +42,7 @@ class RootIndex extends React.Component {
 								<li>
 									<Link to={this.props.pageContext.currentPage === 2 ? `/` : `/${this.props.pageContext.currentPage - 1}/`}
 												rel="prev"
-										 		className="label-default"
+										 		className="label-default label-large"
 									>←まえのぺーじ</Link>
 								</li>
 							)}
@@ -50,7 +50,7 @@ class RootIndex extends React.Component {
 								<li>
 									<Link to={`/${this.props.pageContext.currentPage + 1}/`}
 												rel="next"
-												className="label-default"
+												className="label-default label-large"
 									>つぎのぺーじ→</Link>
 								</li>
 							)}

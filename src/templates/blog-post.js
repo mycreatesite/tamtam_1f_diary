@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
 						)}
 						<p className={styles.btnBack}>
 							<Link to="/">
-								<span className="label-default">← とっぷへもどる</span>
+								<span>← とっぷへもどる</span>
 							</Link>
 						</p>
 						<AuthorData />

@@ -89,7 +89,7 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 5vmin;
-	  @media (min-width: 1000px) {
+	@media (min-width: 1000px) {
     grid-template-columns: repeat(3, minmax(200px, 1fr));
   }
 }
@@ -118,16 +118,21 @@ a {
 
 .label-default {
   display: inline-block;
-  height: 1rem;
-  border-radius: 0.5rem;
+  border-radius: 100em;
   font-size: 0.5rem;
   font-weight: 700;
   transition: transform 0.3s;
   background-color: #000;
   color: #fff;
-  line-height: 0.95rem;
 	padding: 0 4px;
 	text-decoration: none;
+	&.label-large {
+		font-size: 1rem;
+		line-height: inherit;
+		height: auto;
+		padding: .5rem 1rem;
+		transition: .3s;
+	}
 }
 
 a {
@@ -144,15 +149,11 @@ a {
 	display: flex;
 	justify-content: center;
 	list-style-type: none;
+	flex-wrap: wrap;
 	padding: 0;
 	margin: 0 0 3rem;
 	a {
-		font-size: 1rem;
-		line-height: 1.8rem;
-		height: 1.8rem;
-		border-radius: .9rem;
-		padding: 0 8px;
-		transition: .3s;
+		text-align: center;
 		&:hover {
 			background-color: #f8fc30;
 			color: #000;
@@ -161,4 +162,13 @@ a {
 	li {
 		padding: 1rem;
 	}
+	@media (max-width: 600px) {
+    li {
+			width: 100%;
+			padding: .5rem 1rem;
+			a {
+				display: block;
+			}
+		}
+  }
 }

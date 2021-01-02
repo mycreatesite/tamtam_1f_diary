@@ -1,0 +1,51 @@
+.bgAnim {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	._item {
+		position: absolute;
+		display: block;
+	}
+	.item01 {
+		top: 200px;
+		left: -10%;
+		width: 20vmax;
+		height: 20vmax;
+		border-radius: .5rem;
+		border:4px solid rgba(#fff, .8);
+		transform-origin: center;
+		animation: 15s ease-in-out infinite alternate anim01;
+	}
+	.item02 {
+		bottom: 0;
+		right: 5%;
+		width: 25vmax;
+		height: 25vmax;
+		border-radius: .5rem;
+		border: 6px solid rgba(#fff, .8);
+		transform-origin: center;
+		animation: 15s ease-in-out infinite alternate-reverse anim01;
+	}
+
+	.item03 {
+		bottom: 50%;
+		right: 50%;
+		width: 10vmax;
+		height: 10vmax;
+		border-radius: .5rem;
+		border: 4px solid rgba(#fff, 1);
+		transform-origin: center;
+		animation: 12s ease-in-out infinite alternate-reverse anim01;
+	}
+	@keyframes anim01 {
+		from {
+			transform: translateY(150px) rotate(-45deg);
+		}
+		to {
+			transform: translateY(-150px) rotate(45deg);
+		}
+	}
+}
