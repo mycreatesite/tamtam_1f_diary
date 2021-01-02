@@ -76,8 +76,11 @@ module.exports = {
 				scope: "/",
 				start_url: "/",
 				icon: './static/img/apple-touch-icon.png',
+        icon_options: {
+          purpose: `maskable`,
+        }
       },
 		},
-		'gatsby-plugin-offline',
+		'gatsby-plugin-offline'
   ],
 };
