@@ -17,7 +17,7 @@
 		border-radius: .5rem;
 		border:6px solid #fff;
 		transform-origin: center;
-		animation: 15s ease-in-out infinite alternate anim01;
+		animation: 15s ease-in-out infinite alternate anim;
 	}
 	.item02 {
 		bottom: 0;
@@ -27,7 +27,7 @@
 		border-radius: .5rem;
 		border: 6px solid #fff;
 		transform-origin: center;
-		animation: 15s ease-in-out infinite alternate-reverse anim01;
+		animation: 15s ease-in-out infinite alternate-reverse anim;
 	}
 
 	.item03 {
@@ -38,9 +38,12 @@
 		border-radius: .5rem;
 		border: 4px solid  #fff;
 		transform-origin: center;
-		animation: 12s ease-in-out infinite alternate-reverse anim01;
+		animation: 12s ease-in-out infinite alternate-reverse anim;
+		@media (max-width: 600px) {
+			display: none;
+		}
 	}
-	@keyframes anim01 {
+	@keyframes anim {
 		from {
 			transform: translateY(150px) rotate(-45deg);
 		}

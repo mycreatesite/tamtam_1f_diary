@@ -64,5 +64,20 @@ module.exports = {
 				}
 			}
 		},
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+				name: "たむたむのひとこと日記",
+				short_name: "たむ日記",
+				theme_color: "#000000",
+				background_color: "#f8fc30",
+				display: "standalone",
+				orientation: "portrait",
+				scope: "/",
+				start_url: "/",
+				icon: './static/img/apple-touch-icon.png',
+      },
+		},
+		'gatsby-plugin-offline',
   ],
 };
