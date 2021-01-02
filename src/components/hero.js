@@ -1,11 +1,15 @@
 import React from 'react'
-
-import styles from './scss/hero.module.scss'
+import BgHero from "../../static/img/bg-hero.svg";
+import Hero from "../../static/img/hero.svg";
+import './scss/hero.scss'
 
 export default (props) => (
-	<div className={styles.hero}>
-		<h1 className={styles.heroImage}>
-			<img src="/img/hero.svg" alt={props.siteTitle} width="809" height="450"/>
+	<div className='hero'>
+		<div className='bgHero'>
+			<BgHero />
+		</div>
+		<h1 className='heroImage'>
+			<Hero width="809" height="450" />
 		</h1>
   </div>
 )

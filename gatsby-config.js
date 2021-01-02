@@ -55,6 +55,14 @@ module.exports = {
           "G-VSHNMBVW7B", // Google Analytics 4
         ],
       },
-    }
+		},
+		{
+			resolve: "gatsby-plugin-react-svg",
+			options: {
+				rule: {
+					include: /img/
+				}
+			}
+		},
   ],
 };

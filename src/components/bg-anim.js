@@ -1,5 +1,4 @@
 import React from 'react'
-
 import './scss/bg-anim.scss'
 
 export default () => (
