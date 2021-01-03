@@ -9,7 +9,7 @@ export default (props) => (
 			<BgHero />
 		</div>
 		<h1 className='heroImage'>
-			<Hero width="809" height="450" />
+			<Hero />
 		</h1>
   </div>
 )
