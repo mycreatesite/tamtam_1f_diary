@@ -1,5 +1,5 @@
 import React from 'react'
-import '../scss/base.scss'
+import '../assets/scss/base.scss'
 import Navigation from './navigation'
 import BgAnim from './bg-anim'
 
