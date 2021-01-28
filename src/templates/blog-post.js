@@ -14,7 +14,7 @@ class BlogPostTemplate extends React.Component {
 	render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
-    const heroImageSrc = window.location.protocol + post.heroImage.fluid.src;
+    const heroImageSrc = 'https:' + post.heroImage.fluid.src;
     
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
