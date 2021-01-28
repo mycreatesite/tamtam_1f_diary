@@ -13,12 +13,15 @@ import styles from './scss/blog-post.module.scss'
 class BlogPostTemplate extends React.Component {
 	render() {
     const post = get(this.props, 'data.contentfulBlogPost')
-		const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const siteTitle = get(this.props, 'data.site.siteMetadata.title')
+    const heroImageSrc = window.location.protocol + post.heroImage.fluid.src;
+    
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
 					<SEO
-						title={`${post.title} | ${siteTitle}`}
+            title={`${post.title} | ${siteTitle}`}
+            image = {heroImageSrc}
 					/>
           <div className={styles.hero}>
             <Img
@@ -64,7 +67,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
-				title
+        title
       }
     }
     contentfulBlogPost(slug: { eq: $slug }) {
@@ -74,6 +77,7 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
+          src
         }
       }
       body {

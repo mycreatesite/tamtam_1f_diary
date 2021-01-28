@@ -12,7 +12,6 @@ function SEO({ title, description, image, lang  }) {
         site {
           siteMetadata {
             defaultTitle: title
-            titleTemplate
             defaultDescription: description
             siteUrl: url
             defaultImage: image
@@ -38,7 +37,7 @@ function SEO({ title, description, image, lang  }) {
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
+    image: image || `${siteUrl}${defaultImage}`,
     lang: lang || defaultLang,
     url: `${siteUrl}${pathname}`
   }
@@ -47,7 +46,6 @@ function SEO({ title, description, image, lang  }) {
     <Helmet>
       <title>{seo.title}</title>
       <html lang={seo.lang} />
-      <template>{seo.titleTemplate}</template>
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
       <meta property="og:url" content={seo.url} />

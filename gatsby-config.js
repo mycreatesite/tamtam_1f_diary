@@ -39,22 +39,22 @@ module.exports = {
   pathPrefix: "/gatsby-contentful-starter",
 	plugins: [
 		"gatsby-plugin-sass",
-    "gatsby-transformer-remark",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
-    "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-source-contentful",
-      options: contentfulConfig,
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-VSHNMBVW7B", // Google Analytics 4
-        ],
-      },
+		"gatsby-transformer-remark",
+		"gatsby-transformer-sharp",
+		"gatsby-plugin-react-helmet",
+		"gatsby-plugin-sharp",
+		"gatsby-plugin-sitemap",
+		{
+		resolve: "gatsby-source-contentful",
+		options: contentfulConfig,
+		},
+		{
+		resolve: `gatsby-plugin-google-gtag`,
+		options: {
+			trackingIds: [
+			"G-VSHNMBVW7B", // Google Analytics 4
+			],
+		},
 		},
 		{
 			resolve: "gatsby-plugin-react-svg",
@@ -64,23 +64,23 @@ module.exports = {
 				}
 			}
 		},
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-				name: "たむたむのひとこと日記",
-				short_name: "たむ日記",
-				theme_color: "#000000",
-				background_color: "#f8fc30",
-				display: "standalone",
-				orientation: "portrait",
-				scope: "/",
-				start_url: "/",
-				icon: './static/img/apple-touch-icon.png',
-        icon_options: {
-          purpose: `maskable`,
-        }
-      },
+		{
+		resolve: `gatsby-plugin-manifest`,
+		options: {
+					name: "たむたむのひとこと日記",
+					short_name: "たむ日記",
+					theme_color: "#000000",
+					background_color: "#f8fc30",
+					display: "standalone",
+					orientation: "portrait",
+					scope: "/",
+					start_url: "/",
+					icon: './static/img/apple-touch-icon.png',
+			icon_options: {
+			purpose: `maskable`,
+			}
+		},
 		},
 		'gatsby-plugin-offline'
-  ],
+	],
 };
