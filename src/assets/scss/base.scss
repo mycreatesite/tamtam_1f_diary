@@ -1,3 +1,4 @@
+@use '/src/assets/scss/variables' as val;
 @import "~fontsource-noto-sans-jp/400.css";
 @import "~fontsource-noto-sans-jp/700.css";
 @import "~fontsource-noto-sans-jp/900.css";
@@ -13,7 +14,7 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   letter-spacing: 0.1em;
-  color: #000;
+  color: val.$textColor;
   background-color: #f7f7f7;
 	margin: 0;
 	opacity: 0;
@@ -78,14 +79,34 @@ a {
   color: currentColor;
 }
 
+button,input {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
 .wrapper {
   width: calc(100% - 9vmin);
-  max-width: 848px;
+  max-width: 1024px;
   margin: 2.5rem auto 0;
   padding: 2rem 1rem;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 32px 32px 0px 0px;
   overflow-wrap: break-word;
+  &.blog-post-wrapper {
+    max-width: 640px;
+  }
   @media (min-width: 600px) {
     padding: 4rem 2.5rem;
   }
@@ -134,7 +155,7 @@ a {
   font-size: 0.5rem;
   font-weight: 700;
   transition: transform 0.3s;
-  background-color: #000;
+  background-color: val.$textColor;
   color: #fff;
 	padding: 0 4px;
 	text-decoration: none;
@@ -168,7 +189,7 @@ a {
 		text-align: center;
 		&:hover {
 			background-color: #f8fc30;
-			color: #000;
+			color: val.$textColor;
 		}
 	}
 	li {

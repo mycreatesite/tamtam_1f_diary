@@ -1,3 +1,5 @@
+@use '/src/assets/scss/variables' as val;
+
 .post-header {
   z-index: 0;
   width: calc(100% - 9vmin);
@@ -25,7 +27,7 @@
   time {
     display: inline-block;
     padding: 1px 0.5rem 2px;
-    background-color: #f8fc30;
+    background-color: val.$primary;
     font-size: 10px;
     font-weight: bold;
     border-radius: 9px;
@@ -47,7 +49,7 @@
 		font-weight: bold;
 		text-decoration: none;
 		padding-bottom: .25rem;
-		border-bottom: 2px solid #000;
+		border-bottom: 2px solid val.$textColor;
   }
   span {
 		display: block;
@@ -83,11 +85,6 @@
 .heroImage img {
   width: auto;
   height: 100%;
-}
-
-
-@media (min-width: 1000px) {
-  //
 }
 
 .heroHeadline {

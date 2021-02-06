@@ -9,6 +9,7 @@ import ArticlePreview from '../components/article-preview'
 import AuthorData from '../components/author-data'
 import Footer from '../components/footer'
 import SEO from '../components/seo'
+import ModalSeach from "../components/modalSearch";
 
 class RootIndex extends React.Component {
 	render() {
@@ -16,46 +17,47 @@ class RootIndex extends React.Component {
     const siteLang = get(this, 'props.data.site.siteMetadata.lang')
     const siteDesc = get(this, 'props.data.site.siteMetadata.description')
     const siteOgImage = get(this, 'props.data.site.siteMetadata.image')
-		const posts = get(this, 'props.data.allContentfulBlogPost.edges')
+	const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     return (
       <Layout location={this.props.location} siteTitle={siteTitle}>
         <div>
-					<SEO title={siteTitle}
-						description={siteDesc}
-						image={siteOgImage}
-						lang={siteLang}
-					/>
-          <Hero siteTitle={siteTitle}/>
-					<div className="wrapper">
+			<SEO title={siteTitle}
+				description={siteDesc}
+				image={siteOgImage}
+				lang={siteLang}
+			/>
+         	<Hero siteTitle={siteTitle}/>
+			<div className="wrapper">
             <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-										<ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-						</ul>
-						<ul className="pagination">
-							{!this.props.pageContext.isFirst && (
-								<li>
-									<Link to={this.props.pageContext.currentPage === 2 ? `/` : `/${this.props.pageContext.currentPage - 1}/`}
-												rel="prev"
-										 		className="label-default label-large"
-									>←まえのぺーじ</Link>
-								</li>
-							)}
-							{!this.props.pageContext.isLast && (
-								<li>
-									<Link to={`/${this.props.pageContext.currentPage + 1}/`}
-												rel="next"
-												className="label-default label-large"
-									>つぎのぺーじ→</Link>
-								</li>
-							)}
-						</ul>
-						<AuthorData />
-						<Footer />
+				{posts.map(({ node }) => {
+				return (
+					<li key={node.slug}>
+						<ArticlePreview article={node} />
+					</li>
+				)
+				})}
+			</ul>
+			<ul className="pagination">
+				{!this.props.pageContext.isFirst && (
+					<li>
+						<Link to={this.props.pageContext.currentPage === 2 ? `/` : `/${this.props.pageContext.currentPage - 1}/`}
+						rel="prev"
+						className="label-default label-large"
+						>←まえのぺーじ</Link>
+					</li>
+				)}
+				{!this.props.pageContext.isLast && (
+					<li>
+						<Link to={`/${this.props.pageContext.currentPage + 1}/`}
+						rel="next"
+						className="label-default label-large"
+						>つぎのぺーじ→</Link>
+					</li>
+				)}
+			</ul>
+			<AuthorData />
+			<Footer />
+			<ModalSeach />
           </div>
         </div>
       </Layout>

@@ -1,3 +1,5 @@
+@use '/src/assets/scss/variables' as val;
+
 .previewlink {
   display: block;
 	text-decoration: none;
@@ -25,7 +27,7 @@
 	font-weight: bold;
 	font-size: .75rem;
 	letter-spacing: 1;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid val.$textColor;
 	transition: .3s;
 }
 
@@ -54,7 +56,7 @@
     time {
       display: inline-block;
       padding: 1px 0.5rem 2px;
-      background-color: #f8fc30;
+      background-color: val.$primary;
       font-size: 10px;
       font-weight: bold;
       border-radius: 9px;

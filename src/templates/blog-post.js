@@ -38,7 +38,7 @@ class BlogPostTemplate extends React.Component {
 						</time>
 						<h1 className="section-headline">{post.title}</h1>
 					</div>
-          <div className="wrapper">
+          <div className="wrapper blog-post-wrapper">
 						{post.body && (
 							<div
 								className={styles.postContent}
@@ -75,7 +75,7 @@ export const pageQuery = graphql`
 			publishDateJP: publishDate(formatString: "Y年MM月DD日")
 			publishDate(formatString: "YYYY-MM-DD")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
+        fluid(maxWidth: 1200, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
           src
         }

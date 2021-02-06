@@ -1,3 +1,5 @@
+@use '/src/assets/scss/variables' as val;
+
 .footer {
   padding: 2.5rem 0 0;
   text-align: center;
@@ -17,7 +19,7 @@
     display: block;
     font-size: 10px;
     strong {
-      border-bottom: 1px dashed #000;
+      border-bottom: 1px dashed val.$textColor;
     }
     a {
       text-decoration: none;
