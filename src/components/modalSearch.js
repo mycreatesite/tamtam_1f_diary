@@ -24,7 +24,12 @@ class ModalWindow extends React.Component {
   render() {
     return (
       <div className="modalWrapper">
-        <button className="btn-openModal" onClick={this.openModal}><span class="_icon"><FontAwesomeIcon icon={faSearch} size="2x"/></span><span class="_text">にっきを<br/>けんさくする</span></button>
+        <div className="openModal">
+          <button className="btn-openModal" onClick={this.openModal}>
+            <span className="_icon"><FontAwesomeIcon icon={faSearch} size="2x"/></span>
+            <span className="_text">にっきを<br/>けんさくする</span>
+          </button>
+        </div>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}
@@ -34,7 +39,9 @@ class ModalWindow extends React.Component {
           closeTimeoutMS={300}
         >
           <Search />
-          <button className="btn-closeModal" onClick={this.closeModal}>✖</button>
+          <div className="closeModal">
+            <button className="btn-closeModal" onClick={this.closeModal}>✖</button>
+          </div>
         </Modal>
       </div>
     );

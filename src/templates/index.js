@@ -28,33 +28,33 @@ class RootIndex extends React.Component {
 			/>
          	<Hero siteTitle={siteTitle}/>
 			<div className="wrapper">
-            <ul className="article-list">
-				{posts.map(({ node }) => {
-				return (
-					<li key={node.slug}>
-						<ArticlePreview article={node} />
-					</li>
-				)
-				})}
-			</ul>
-			<ul className="pagination">
-				{!this.props.pageContext.isFirst && (
-					<li>
-						<Link to={this.props.pageContext.currentPage === 2 ? `/` : `/${this.props.pageContext.currentPage - 1}/`}
-						rel="prev"
-						className="label-default label-large"
-						>←まえのぺーじ</Link>
-					</li>
-				)}
-				{!this.props.pageContext.isLast && (
-					<li>
-						<Link to={`/${this.props.pageContext.currentPage + 1}/`}
-						rel="next"
-						className="label-default label-large"
-						>つぎのぺーじ→</Link>
-					</li>
-				)}
-			</ul>
+				<ul className="article-list">
+					{posts.map(({ node }) => {
+					return (
+						<li key={node.slug}>
+							<ArticlePreview article={node} />
+						</li>
+					)
+					})}
+				</ul>
+				<ul className="pagination">
+					{!this.props.pageContext.isFirst && (
+						<li>
+							<Link to={this.props.pageContext.currentPage === 2 ? `/` : `/${this.props.pageContext.currentPage - 1}/`}
+							rel="prev"
+							className="label-default label-large"
+							>←まえのぺーじ</Link>
+						</li>
+					)}
+					{!this.props.pageContext.isLast && (
+						<li>
+							<Link to={`/${this.props.pageContext.currentPage + 1}/`}
+							rel="next"
+							className="label-default label-large"
+							>つぎのぺーじ→</Link>
+						</li>
+					)}
+				</ul>
 			<AuthorData />
 			<Footer />
 			<ModalSeach />

@@ -5,10 +5,19 @@
   overflow: hidden;
 }
 
-.btn-openModal {
+
+.openModal {
     position: fixed;
+    width: calc(100% - 9vmin);
+    max-width: calc(1024px - 2.5rem);
     bottom: 1rem;
     right: 1rem;
+    @media (min-width: 600px) {
+        right: auto;
+    }
+}
+.btn-openModal {
+    float: right;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -40,9 +49,11 @@
     @media (min-width: 600px) {
         width: 8rem;
         height: 8rem;
-        bottom: 2.5rem;
         border: 6px solid val.$textColor;
         background-color: rgba(val.$primary, .3);
+    }
+    @media (min-width: 1200px) {
+        margin-right: -8rem;
     }
 }
 

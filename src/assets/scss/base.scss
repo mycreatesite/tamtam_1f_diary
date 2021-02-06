@@ -97,6 +97,7 @@ input {
 }
 
 .wrapper {
+  position: relative;
   width: calc(100% - 9vmin);
   max-width: 1024px;
   margin: 2.5rem auto 0;
