@@ -71,4 +71,4 @@ public
 .netlify
 
 # contentful tokens
-tokens.md
+tokens.*
