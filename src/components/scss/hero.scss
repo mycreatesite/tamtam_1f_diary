@@ -6,15 +6,6 @@
   align-items: center;
 }
 
-.bgHero {
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 .heroImage {
   margin: 0;
   svg {
@@ -25,7 +16,8 @@
 
 @media (min-width: 600px) {
   .hero {
-    height: 30vw;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
   }
   .heroImage {
     width: 50%;
@@ -34,7 +26,6 @@
     align-items: center;
     svg {
 			width: auto;
-      max-height: 370px;
     }
   }
 }
