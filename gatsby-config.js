@@ -36,10 +36,10 @@ module.exports = {
 		appleTouchIcon: `img/apple-touch-icon.png`,
 		twitterUsername: `@hello_myscreate`
 	},
-  	pathPrefix: "/gatsby-contentful-starter",
-	flags: {
-		PRESERVE_WEBPACK_CACHE: true,
-	},
+	pathPrefix: "/gatsby-contentful-starter",
+	// flags: {
+	// 	PRESERVE_WEBPACK_CACHE: true,
+	// },
 	plugins: [
 		"gatsby-plugin-sass",
 		"gatsby-transformer-remark",
