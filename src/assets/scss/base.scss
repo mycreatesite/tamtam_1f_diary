@@ -100,7 +100,7 @@ input {
   position: relative;
   width: calc(100% - 9vmin);
   max-width: 1024px;
-  margin: 2.5rem auto 0;
+  margin: 1.5rem auto 0;
   padding: 2rem 1rem;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 32px 32px 0px 0px;
@@ -109,6 +109,7 @@ input {
     max-width: 640px;
   }
   @media (min-width: 600px) {
+    margin-top: 2.5rem;
     padding: 4rem 2.5rem;
   }
 }

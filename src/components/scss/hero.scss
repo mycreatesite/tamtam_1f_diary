@@ -7,6 +7,7 @@
 }
 
 .heroImage {
+	padding: 0 2rem;
   margin: 0;
   svg {
 		width: 100%;
@@ -16,10 +17,11 @@
 
 @media (min-width: 600px) {
   .hero {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
   }
   .heroImage {
+		padding: 0;
     width: 50%;
     display: flex;
     justify-content: center;
